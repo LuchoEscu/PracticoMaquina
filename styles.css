@@ -1,4 +1,6 @@
-
+body{
+    background: rgb(119, 120, 121);
+}
 .sobreNosotros{
     background: rgb(182,202,226);
     background: radial-gradient(circle, rgba(182,202,226,1) 0%, rgba(213,213,213,1) 100%);
@@ -29,4 +31,11 @@
 
 .navbar-brand{
     font-weight: 600;
+}
+.test{
+    background: rgb(182,202,226);
+    background: radial-gradient(circle, rgba(182,202,226,1) 0%, rgba(213,213,213,1) 100%);
+    padding: 50px;
+    box-shadow: 0 0 7px black;
+    border-radius: 7px;
 }
