@@ -3,3 +3,14 @@
     object-fit: cover;
     object-position: center;
 }
+
+.logo{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.navbar-brand{
+    font-weight: 600;
+}
