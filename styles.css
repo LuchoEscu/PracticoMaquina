@@ -1,17 +1,13 @@
 .sobreNosotros{
     background: rgb(182,202,226);
     background: radial-gradient(circle, rgba(182,202,226,1) 0%, rgba(213,213,213,1) 100%);
-    padding: 50px;
-    box-shadow: 0 0 7px black;
-    border-radius: 7px;
+    padding: 10px 35px;
 }
 .tituloInicial{
     color: rgb(87, 87, 231);
-    padding: 10px;
 }
 .parrafoInicial{
     font-size: 15px;
-    padding: 10px;
 }
 .ancho{
     height: 400px;
