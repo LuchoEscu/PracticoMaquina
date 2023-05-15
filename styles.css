@@ -1,7 +1,24 @@
-.sobreNosotros{
-    background: rgb(182,202,226);
-    background: radial-gradient(circle, rgba(182,202,226,1) 0%, rgba(213,213,213,1) 100%);
-    padding: 10px 35px;
+/* .Sun-of-Midday-1-hex { color: #96ACD9; }
+.Sun-of-Midday-2-hex { color: #C4D4F2; }
+.Sun-of-Midday-3-hex { color: #035AA6; }
+.Sun-of-Midday-4-hex { color: #034C8C; }
+.Sun-of-Midday-5-hex { color: #023E73; } */
+nav{
+    background: linear-gradient(111.96deg, #2d3a57 21.67%, #2a5873 38%, #26889f 60.93%, #2e8ea0 63.74%, #4ba2a2 75.36%, #5dafa3 85.43%, #63b3a4 92.76%);
+}
+.navitems{
+    padding: 5px 20px !important;
+    color: white !important;
+}
+.pantallaInicio{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.cuerpo{
+    padding: 40px 35px;
+}
+.itemsClass{
+    color: white;
 }
 .tituloInicial{
     color: #034C8C;
@@ -33,10 +50,20 @@
 .navbar-brand{
     font-weight: 600;
 }
+.contactoClass{
+    background-color: #212529;
+    color: white;
+}
 .cajaForm{
-    background: rgb(167, 172, 177);
+    background-color:  #023E73;
     padding: 50px;
     border-radius: 7px;
-    box-shadow: 0 0 7px black;
+    box-shadow: 0 0 7px rgb(57, 57, 57);
 
+}
+.btn-enviar{
+    background-color:  #2fd3c4;
+}
+.footerClass{
+    padding: 15px 3px;
 }
