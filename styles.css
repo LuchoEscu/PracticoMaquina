@@ -32,6 +32,40 @@ nav{
     object-position: center;
 }
 
+.imagen-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-image: url(../PracticoMaquina/Imagenes/vigilancia.jpg);
+    width: 100%;
+    height: 198px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imagenes{
+    width: 100%;
+    height: 398px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.parrafo-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: size 15px;
+}
+
+h2{
+    color:#034C8C;
+}
+
 .logo{
     height: 50px;
     width: 50px;
