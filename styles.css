@@ -98,6 +98,14 @@ h2{
 .btn-enviar{
     background-color:  #2fd3c4;
 }
+
+
+footer{
+    justify-content:space-between;
+    align-items: center;
+}
+
 .footerClass{
     padding: 15px 3px;
 }
+
