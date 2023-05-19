@@ -53,6 +53,33 @@ nav{
     object-position: center;
 }
 
+#productos{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    width: 300px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top{
+    width: 200px;
+    height: 180px;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
 .parrafo-nosotros{
     display: flex;
     flex-direction: column;
@@ -80,10 +107,10 @@ h2{
     object-position: center;
 }
 
-
 .navbar-brand{
     font-weight: 600;
 }
+
 .contactoClass{
     background-color: #212529;
     color: white;
@@ -100,10 +127,6 @@ h2{
 }
 
 
-footer{
-    justify-content:space-between;
-    align-items: center;
-}
 
 .footerClass{
     padding: 15px 3px;
