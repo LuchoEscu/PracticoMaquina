@@ -1,0 +1,83 @@
+[
+    {
+        "producto":"Alarma Para Auto Dp20 Tx-sb Volumetrica Dos Controles 3491",
+        "categoria": 1,
+        "precio": "$ 27.649",
+        "envioGratis": true,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Alarma auto Producto 1.PNG"
+    },
+    {
+        "producto":"Set Cámara Seguridad Inalámbrica Exteriores 1080p - Xiaomi",
+        "categoria": 3,
+        "precio": "$ 47.649",
+        "envioGratis": true,
+        "puntuacion": 4,
+        "imagen": "./Imagenes/Camara producto 1.2.PNG"
+    },
+    {
+        "producto":"Central Alarma Casa 4 Zonas N4-mpxh X28 Alarmas",
+        "categoria": 2,
+        "precio": "$ 32.570",
+        "envioGratis": true,
+        "puntuacion": 5,
+        "imagen": "./Imagenes/Alarma Producto 2.PNG"
+    },
+    {
+        "producto":"Camara Seguridad Wifi Hd Interior 720p Audio Smartlife",
+        "categoria": 3,
+        "precio": "$ 13.240",
+        "envioGratis": true,
+        "puntuacion": 0,
+        "imagen": "./Imagenes/Camara producto 7.PNG"
+    },
+    {
+        "producto":"Alarma Domiciliaria Perimetral Exterior Seguridad Casa Hc",
+        "categoria": 2,
+        "precio": "$ 90.247",
+        "envioGratis": false,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Alarma Producto 4.PNG"
+    },
+    {
+        "producto":"Cámara de seguridad Dahua HAC-B1A11P-0280B Cooper con resolución de 1MP visión nocturna incluida",
+        "categoria": 3,
+        "precio": "$ 7600",
+        "envioGratis": true,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Camara producto 10.PNG"
+    },
+    {
+        "producto":"Cámara de seguridad Ezviz C6N con resolución de 2MP visión nocturna incluida blanca",
+        "categoria": 3,
+        "precio": "$ 17.279",
+        "envioGratis": true,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Camara producto 9.PNG"
+    },
+    {
+        "producto":"Alarma Auto Volumetrica Full Dos Controles Sirena 4 Canales",
+        "categoria": 1,
+        "precio": "$ 14.702",
+        "envioGratis": true,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Alarma auto Producto 2.PNG"
+    },
+    {
+        "producto":"Alarma Para Autos X-28 A3 Corte De Motor Anti Asalto Apertura Puerta",
+        "categoria": 1,
+        "precio": "$ 7900",
+        "envioGratis": false,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Alarma auto Producto 3.PNG"
+    },
+    {
+        "producto":"Cámara De Seguridad Ip 1080p Infrarrojo.",
+        "categoria": 3,
+        "precio": "$ 28.450",
+        "envioGratis": true,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Camara producto 3.PNG"
+    }
+    
+]

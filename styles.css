@@ -6,6 +6,11 @@
 nav{
     background: linear-gradient(111.96deg, #2d3a57 21.67%, #2a5873 38%, #26889f 60.93%, #2e8ea0 63.74%, #4ba2a2 75.36%, #5dafa3 85.43%, #63b3a4 92.76%);
 }
+.card{
+    margin: 0 auto !important;
+    float: none !important;
+    margin-bottom: 10px !important;
+}
 
 .navitems{
     padding: 5px 20px !important;
@@ -58,7 +63,7 @@ nav{
     justify-content: center;
     text-align: center;
     color: white;
-    background-image: url(../PracticoMaquina/Imagenes/vigilancia.jpg);
+    background-image: url(./Imagenes/vigilancia.jpg);
     width: 100%;
     height: 198px;
     object-fit: cover;
@@ -73,6 +78,9 @@ nav{
 }
 
 #productos{
+    background-color: #c5c8cd78;
+}
+#tituloProductos{
     text-align: center;
     width: 100%;
     display: flex;
@@ -180,4 +188,34 @@ h2{
     text-align: center;
     font-size: 13px;
     color: white;
+}
+.itemsProd{
+    height: 225px;
+}
+
+.imgProd{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.imgBorde{
+    border: 0px;
+}
+.fa-star, .fa-star-half-stroke{
+    color: #5650ab !important;
+}
+.envioGratis{
+    color: #00a650;
+}
+.tituloItem{
+    color: #333;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+.precioItem{
+    color: #333;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-right: 8px;
 }
