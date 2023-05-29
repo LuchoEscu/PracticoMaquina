@@ -150,6 +150,59 @@ h2{
     box-shadow: 0 0 7px rgb(57, 57, 57);
 
 }
+
+.categoriasProducto h3{
+    background-color: #034C8C;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.categoriasProducto a{
+    text-decoration: none;
+    color: #212529;
+    font-size: 15px;
+}
+
+.categoriasProducto{
+    height: 560px;
+    padding: 20px;
+    background-color: #2d3a57;
+    color: white;
+}
+
+
+.accordion-item,.accordion-button:hover{
+    color: white;
+    background-color: #034C8C;
+    font-weight: bold;
+    transition: all .2s ease-out;
+}
+
+.list-group,.itemsGroup:hover{
+    background-color: #2e8ea0;
+    transition: all .2s ease-out;
+}
+
+.itemsGroup a:hover{
+    color: white;
+}
+
+.form-check-label:hover{
+    background-color: #26889f;
+    border-radius: 5px;
+    width: 170px;
+    text-align: center;
+    transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+}
+
 .btn-enviar{
     background-color:  #2fd3c4;
 }
@@ -201,7 +254,7 @@ h2{
     border: 0px;
 }
 .fa-star, .fa-star-half-stroke{
-    color: #5650ab !important;
+    color:#023E73 !important;
 }
 .envioGratis{
     color: #00a650;
