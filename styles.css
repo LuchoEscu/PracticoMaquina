@@ -173,8 +173,11 @@ h2{
     padding: 20px;
     background-color: #2d3a57;
     color: white;
+    max-width: 400px;
+    height: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
 }
-
 
 .accordion-item,.accordion-button:hover{
     color: white;
@@ -184,24 +187,10 @@ h2{
 }
 
 .list-group,.itemsGroup:hover{
-    background-color: #2e8ea0;
+    background-color: rgb(194, 194, 194);
     transition: all .2s ease-out;
 }
 
-.itemsGroup a:hover{
-    color: white;
-}
-
-.form-check-label:hover{
-    background-color: #26889f;
-    border-radius: 5px;
-    width: 170px;
-    text-align: center;
-    transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-}
 
 .btn-enviar{
     background-color:  #2fd3c4;
