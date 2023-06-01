@@ -87,7 +87,7 @@ const filtro = (cat) => {
     
   })
   if(res.length < 1){
-    htmlProd = '<h3 class="sinResultados">Sin resultados para esta categoría.</h3>'
+    htmlProd = '<div class="row"><div class="col-md-6 sinResultados"><br><img src="./Imagenes/duda.svg" class="img_cartel"><br><h3 class="sinResultados">Sin resultados para esta categoría.</h3><br></div></div>'
   }
   document.getElementById("listaDeProductos").innerHTML = htmlProd
 

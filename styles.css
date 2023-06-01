@@ -180,8 +180,8 @@ h2{
 }
 
 .accordion-item,.accordion-button:hover{
-    color: white;
-    background-color: #034C8C;
+    color: black;
+    background-color: #93c3ee;
     font-weight: bold;
     transition: all .2s ease-out;
 }
@@ -242,6 +242,14 @@ h2{
 .imgBorde{
     border: 0px;
 }
+
+.img_cartel{
+    object-fit: cover;
+    object-position: center;
+    width: 540px;
+    height: 350px;
+}
+
 .fa-star, .fa-star-half-stroke{
     color:#023E73 !important;
 }
@@ -262,5 +270,11 @@ h2{
     margin-right: 8px;
 }
 .sinResultados{
-    color: red;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
 }

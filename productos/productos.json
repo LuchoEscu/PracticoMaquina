@@ -1,7 +1,7 @@
 [
     {
         "producto":"Alarma Para Auto Dp20 Tx-sb Volumetrica Dos Controles 3491",
-        "categoria": 1,
+        "categoria": 2,
         "precio": "$ 27.649",
         "envioGratis": true,
         "puntuacion": 3,
@@ -17,7 +17,7 @@
     },
     {
         "producto":"Central Alarma Casa 4 Zonas N4-mpxh X28 Alarmas",
-        "categoria": 2,
+        "categoria": 1,
         "precio": "$ 32.570",
         "envioGratis": true,
         "puntuacion": 5,
@@ -33,7 +33,7 @@
     },
     {
         "producto":"Alarma Domiciliaria Perimetral Exterior Seguridad Casa Hc",
-        "categoria": 2,
+        "categoria": 1,
         "precio": "$ 90.247",
         "envioGratis": false,
         "puntuacion": 3,
@@ -42,7 +42,7 @@
     {
         "producto":"Cámara de seguridad Dahua HAC-B1A11P-0280B Cooper con resolución de 1MP visión nocturna incluida",
         "categoria": 3,
-        "precio": "$ 7600",
+        "precio": "$ 7.600",
         "envioGratis": true,
         "puntuacion": 3,
         "imagen": "./Imagenes/Camara producto 10.PNG"
@@ -57,7 +57,7 @@
     },
     {
         "producto":"Alarma Auto Volumetrica Full Dos Controles Sirena 4 Canales",
-        "categoria": 1,
+        "categoria": 2,
         "precio": "$ 14.702",
         "envioGratis": true,
         "puntuacion": 3,
@@ -65,8 +65,8 @@
     },
     {
         "producto":"Alarma Para Autos X-28 A3 Corte De Motor Anti Asalto Apertura Puerta",
-        "categoria": 1,
-        "precio": "$ 7900",
+        "categoria": 2,
+        "precio": "$ 7.900",
         "envioGratis": false,
         "puntuacion": 3,
         "imagen": "./Imagenes/Alarma auto Producto 3.PNG"
@@ -78,6 +78,46 @@
         "envioGratis": true,
         "puntuacion": 3,
         "imagen": "./Imagenes/Camara producto 3.PNG"
+    },
+    {
+        "producto":"Candado De Aleación Bulit 10.000 Combinaciones 65mm Rojo.",
+        "categoria": 5,
+        "precio": "$ 3.940",
+        "envioGratis": false,
+        "puntuacion": 4,
+        "imagen": "./Imagenes/Candado_producto_5.PNG"
+    },
+    {
+        "producto":"Candado Acero 50mm Doble Traba De Seguridad Reforzada.",
+        "categoria": 5,
+        "precio": "$ 1.259",
+        "envioGratis": true,
+        "puntuacion": 5,
+        "imagen": "./Imagenes/Candado_producto_4.PNG"
     }
-    
+    ,
+    {
+        "producto":"Candado Reforzado Pesado 50 Mm Hierro Bronceado.",
+        "categoria": 5,
+        "precio": "$ 2.003",
+        "envioGratis": false,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Candado_producto_2.PNG"
+    },
+    {
+        "producto":"Candado Bulit De Aleación Con Combinación 20mm - Para Locker.",
+        "categoria": 5,
+        "precio": "$ 3.011",
+        "envioGratis": true,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Candado_producto_1.PNG"
+    },
+    {
+        "producto":"Candado Con Huella Digital Tactil Usb Resistente Agua Seguro.",
+        "categoria": 5,
+        "precio": "$ 10.285",
+        "envioGratis": true,
+        "puntuacion": 3,
+        "imagen": "./Imagenes/Candado_producto_3.PNG"
+    }
 ]

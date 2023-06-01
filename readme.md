@@ -138,6 +138,31 @@ Alarma Auto Universal X-28 Z10 Volumetrico Sirena - Xp
 
 Precio: $27.614
 ---------------------
+********************************************************************
+Candados:
+
+Candado Bulit De Aleación Con Combinación 20mm - Para Locker
+
+Precio: $3011
+----------------------
+
+Candado Reforzado Pesado 50 Mm Hierro Bronceado
+
+Precio: $2003
+----------------------
+Candado Con Huella Digital Tactil Usb Resistente Agua Seguro
+
+Precio: $10.285
+----------------------
+Candado Acero 50mm Doble Traba De Seguridad Reforzada
+
+Precio: $1259
+----------------------
+Candado De Aleación Bulit 10.000 Combinaciones 65mm Rojo
+
+Precio: $3940
+----------------------
+----------------------
 
 
 
