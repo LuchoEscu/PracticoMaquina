@@ -33,8 +33,61 @@ let categorias = [{
                   }, ]
 let productosList = [];
 
-const listarProductos = (imagen, producto, precio, envioGratis, estrellas) => {
-  let html = '<a href="#" class="list-group-item list-group-item-action itemsProd" aria-current="true">' +
+const validarCompra = (e) => {
+  e.preventDefault()
+  document.getElementById('cerrarCompra').click()
+  Swal.fire('Haz realizado la compra con exito','','success')
+}
+
+const cantidadEstrellas = (cant) => {
+  let estrellas = ''
+      for (let i = 0 ; i < 5 ; i++){
+          cant--
+          if(cant >= 0)
+              estrellas = estrellas + '<i class="fa-solid fa-star fa-lg"></i>'
+          else 
+              estrellas = estrellas + '<i class="fa-regular fa-star fa-lg"></i>'
+          
+      }
+  return estrellas    
+}
+
+const detallesCompra = (imagen, producto, precio, envioGratis, cantEstrellas) => {
+  document.getElementById('nombre').value = ''
+  document.getElementById('domicilioBarrio').value = ''
+  document.getElementById('domicilioCPostal').value = ''
+
+  let estrellas = cantidadEstrellas (parseInt(cantEstrellas))
+  let envio = envioGratis ? envioGratis : "Envío: $ 1.499"
+  document.getElementById('productoCompra').innerHTML =     '<div class="row imgProd">' +
+  '<div class="col-md-4">' +
+    '<img width="160" height="160" src="'+ imagen +'"' +
+      'class="img-fluid img-thumbnail imgBorde" alt="...">' +
+  '</div>' +
+  '<div class="col-md-8">' +
+    '<div class="row">' +
+      '<div class="col-md-12">' +
+        '<p class="text-start tituloItem">' + producto + '</p>' +
+      '</div>' +
+      '<div class="col-md-12">' +
+        '<h3 class="text-start precioItem">' + precio + '</h3>' +
+      '</div>' +
+      '<div class="col-md-12">' +
+        '<p class="text-start envioGratis">' + envio + '</p>' +
+      '</div>' +
+    '</div>' +
+    '<div class="row">' +
+      '<div class="col-md-8"></div>' +
+      '<div class="col-md-4">' + estrellas +
+      '</div>' +
+    '</div>' +
+  '</div>' +
+'</div>'
+}
+
+
+const listarProductos = (imagen, producto, precio, envioGratis, estrellas, cantEstrellas) => {
+  let html = '<a href="#view" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="detallesCompra('+"'"+imagen+"',"+"'"+producto+"',"+"'"+precio+"',"+"'"+envioGratis+"',"+"'"+cantEstrellas+"'"+')" class="list-group-item list-group-item-action itemsProd" aria-current="true">' +
   '<div class="row imgProd">' +
     '<div class="col-md-4">' +
       '<img width="160" height="160" src="'+ imagen +'"' +
@@ -63,18 +116,7 @@ const listarProductos = (imagen, producto, precio, envioGratis, estrellas) => {
   return html 
 }
 
-const cantidadEstrellas = (cant) => {
-    let estrellas = ''
-        for (let i = 0 ; i < 5 ; i++){
-            cant--
-            if(cant >= 0)
-                estrellas = estrellas + '<i class="fa-solid fa-star fa-lg"></i>'
-            else 
-                estrellas = estrellas + '<i class="fa-regular fa-star fa-lg"></i>'
-            
-        }
-    return estrellas    
-}
+
 
 const filtro = (cat) => {
   const res = productosList.filter(producto => producto.categoria === cat)
@@ -83,7 +125,7 @@ const filtro = (cat) => {
     let envioGratis = prod.envioGratis ? 'Envio gratis' : ''
     let estrellas = cantidadEstrellas(prod.puntuacion)
     
-    htmlProd = htmlProd + listarProductos(prod.imagen, prod.producto, prod.precio, envioGratis, estrellas)
+    htmlProd = htmlProd + listarProductos(prod.imagen, prod.producto, prod.precio, envioGratis, estrellas, prod.puntuacion)
     
   })
   if(res.length < 1){
@@ -122,7 +164,6 @@ const mostrarProductos = async () => {
   productosList.forEach(prod => {
     let envioGratis = prod.envioGratis ? 'Envio gratis' : ''
     let estrellas = cantidadEstrellas(prod.puntuacion)
-    
     htmlProd = htmlProd + listarProductos(prod.imagen, prod.producto, prod.precio, envioGratis, estrellas)
     
   })
