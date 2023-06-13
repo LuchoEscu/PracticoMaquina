@@ -3,6 +3,11 @@
 .Sun-of-Midday-3-hex { color: #035AA6; }
 .Sun-of-Midday-4-hex { color: #034C8C; }
 .Sun-of-Midday-5-hex { color: #023E73; } */
+:root{
+    --tipeo_titulovelocidad: 6s;
+    --tipeo_titulocaracteres: 18;
+}
+
 nav{
     background: linear-gradient(111.96deg, #2d3a57 21.67%, #2a5873 38%, #26889f 60.93%, #2e8ea0 63.74%, #4ba2a2 75.36%, #5dafa3 85.43%, #63b3a4 92.76%);
 }
@@ -46,6 +51,7 @@ nav{
 }
 .tituloInicial{
     color: #034C8C;
+    position: relative;
 }
 .parrafoInicial{
     font-size: 15px;
@@ -246,7 +252,7 @@ h2{
 .img_cartel{
     object-fit: cover;
     object-position: center;
-    width: 540px;
+    width: 100%;
     height: 350px;
 }
 
@@ -277,4 +283,49 @@ h2{
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
+}
+
+.imagenes_select{
+    object-fit: cover;
+    object-position: center;
+    width: 94px;
+    height: 85px;
+    border: 2px solid #034C8C;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.imagenes_select:hover{
+    transition: all .3s ease-out;
+    opacity: 100%;
+}
+
+.imagen_seleccionada{
+    opacity: 1 !important;
+    box-shadow: #212529 0px 0px 1px 1px;
+}
+
+.formulario_tarjeta{
+   background-color: white;
+   margin-top: 38px;
+}
+
+.botones_sucursales{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.formulario_efectivo{
+    margin-top: 50px;
+}
+
+.form-control{
+    border: gray 1px solid;
+}
+.form-select{
+    background-color: rgb(199, 199, 199);
+    color: #212529;
 }

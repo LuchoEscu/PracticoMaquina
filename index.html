@@ -104,9 +104,8 @@
   <div class="container-fluid cuerpo">
     <div class="row">
       <div class="col-md-6 pantallaInicio">
-        <h2 class="tituloInicial">
-          Especialistas en soluciones integrales de seguridad para el desarrollo de su empresa y propiedad.
-        </h2>
+        <h2 class="tituloInicial" id="titulo">
+          Especialistas en soluciones integrales de seguridad para el desarrollo de su empresa y propiedad.</h2>
       </div>
       <div class="col-md-6 pantallaInicio"></div>
       <div class="col-md-6 pantallaInicio"></div>
@@ -134,40 +133,196 @@
                   <h5 class="modal-title" id="exampleModalLabel">Completa la compra</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <form onsubmit="validarCompra(event)">
+              <form onsubmit="validarCompra(event)" class="needs-validation" novalidate>
               <div class="modal-body">
                   <div id="productoCompra"></div>
                   <hr>
                   <div class="row">
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="nombre">Nombre y apellido</label>
+                              <label for="nombre"><i class="fa-solid fa-user" style="color: #000000;"></i> Nombre y apellido</label>
                               <input required type="text" id="nombre" name="nombre" class="form-control" maxlength="50"/>
+                              <div class="invalid-feedback">
+                                Por favor Ingrese su Nombre y Apellido.
+                              </div>
+                              <div class="valid-feedback">
+                                Su Nombre y Apellido son Validos.
+                              </div>
                           </div>
                       </div>
                     </div>
                     <br>
                   <div class="row">
-                      <div class="col-md-8">
+                      <div class="col-md-6">
                           <div class="form-group">
-                              <label for="domicilioBarrio">Barrio</label>
+                              <label for="domicilioBarrio"><i class="fa-solid fa-house" style="color: #000000;"></i> Domicilio</label>
                               <input required type="text" name="domicilioBarrio" id="domicilioBarrio" class="form-control" maxlength="50"/>
+                              <div class="invalid-feedback">
+                                Por favor Ingrese su Domicilio en el que se encuentre Ubicado.
+                              </div>
+                              <div class="valid-feedback">
+                                Su Domicilio es Valido.
+                              </div>
                           </div>
                       </div>
-  
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                           <div class="form-group">
-                              <label for="domicilioCPostal">Cód. Postal</label>
+                              <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #000000;"></i> Cód. Postal</label>
                               <input required type="text" name="domicilioCPostal" id="domicilioCPostal" class="form-control" maxlength="20"/>
-                          </div>
-                      </div>
+                              <div class="invalid-feedback">
+                                Por favor ingrese un Codigo postal.
+                              </div>
+                              <div class="valid-feedback">
+                                Su Codigo postal es valido.
+                              </div>
+                           </div>
+                       </div>
                   </div>
                   <br>
-                  <div class="row"><h6>Datos de la tarjeta</h6></div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="validationCustom05" class="form-label"><i class="fa-solid fa-mountain-sun" style="color: #000000;"></i>&nbsp; Provincia</label>
+                      <select class="form-select" id="validationCustom05" required>
+                        <option selected value="">Seleccione una Provincia.</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Chubut">Chubut</option>
+                        <option value="Santa fe">Santa fe</option>
+                        <option value="Corrientes">Corrientes</option>
+                        <option value="Salta">Salta</option>
+                        <option value="Tucuman">Tucuman</option>
+                        <option value="Santiago del Estero">Santiago del Estero</option>
+                        <option value="Entre Rios">Entre Rios</option>
+                        <option value="Rio Negro">Rio Negro</option>
+                        <option value="Tierra del fuego">Tierra del fuego</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor seleccione la Provincia en la que Reside.
+                      </div>
+                    </div>
+                  </div>
                   <br>
-
-                  
-
+                  <div class="row" id="metodo_de_pago"><h6>Metodos de Pago</h6>
+                    <div class="col-md-6">
+                      <label for="metodo_pago" class="form-label"></label>
+                      <select class="form-select" id="metodo_pago" required>
+                        <option selected disabled value="">Seleccione un medio de pago.</option>
+                        <option selected value="1">Tarjetas de Credito/Debito</option>
+                        <option value="2">En Efectivo</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor seleccione un Medio de Pago.
+                      </div>
+                    </div>
+                  </div>
+                  <br><br>
+                   <div class="container-fluid" id="contenedor_tarjeta">
+                      <div class="row">
+                          <h5>Datos de la Tarjeta</h5>
+                          <div class="col-md-6 formulario_tarjeta mb-4">
+                            <label for="TarjetaNumero"><i class="fa-solid fa-credit-card" style="color: #000000;"></i>&nbsp;Numero de Tarjeta</label>
+                            <input required type="number" name="TarjetaNumero" id="numero_tarjeta" class="form-control" maxlength="20"/>
+                            <div class="invalid-feedback">
+                              Por favor ingrese un Numero de Tarjeta.
+                            </div>
+                            <div class="valid-feedback">
+                              Su Numero de Tarjeta es valido.
+                            </div>
+                            <div>
+                              <label for="tipo_tarjeta" class="form-label"></label>
+                              <select class="form-select" id="tipo_tarjeta" required>
+                                <option selected value="">Tipo de Tarjeta.</option>
+                                <option value="Visa">Visa</option>
+                                <option value="Cencosud">Mastercard</option>
+                              </select>
+                              <div class="invalid-feedback">
+                                Por favor seleccione el Tipo de tarjeta.
+                              </div>
+                            </div>
+                            <br>
+                            <div class="col-md-6 mb-4">
+                              <label for="Codigotarjeta"><i class="fa-solid fa-lock" style="color: #000000;"></i>&nbsp;Codigo de verificacion: </label>
+                              <input required type="text" name="CodigoTarjeta" id="Codigotarjeta" class="form-control" maxlength="3" pattern="^[0-9]+$"/>
+                              <div class="invalid-feedback">
+                                 Por favor ingrese su Codigo de Seguridad.
+                              </div>
+                              <div class="valid-feedback">
+                                Su Codigo de verificacion es Correcto.
+                              </div>
+                            </div>
+                            <div class="col-md-12 d-inline-flex mb-4 m-auto">
+                              <div class="col-md-4 mb-4">
+                                <label for="validationCustom07" class="form-label"><i class="fa-solid fa-calendar" style="color: #000000;"></i>&nbsp;Mes venc:</label>
+                                <select class="form-select" id="validationCustom04" required>
+                                  <option selected value="">mes.</option>
+                                  <option value="01">01</option>
+                                  <option value="02">02</option>
+                                  <option value="03">03</option>
+                                  <option value="04">04</option>
+                                  <option value="05">05</option>
+                                  <option value="06">06</option>
+                                  <option value="07">07</option>
+                                  <option value="08">08</option>
+                                  <option value="09">09</option>
+                                  <option value="10">10</option>
+                                  <option value="11">11</option>
+                                  <option value="12">12</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Seleccione el mes.
+                                </div>
+                              </div>
+                              &nbsp;&nbsp;
+                              <div class="col-md-4 mb-4">
+                                <label for="validationCustom07" class="form-label"><i class="fa-solid fa-calendar" style="color: #000000;"></i>&nbsp;Año venc:</label>
+                                <select class="form-select" id="validationCustom04" required>
+                                  <option selected value="">año.</option>
+                                  <option value="2024">2024</option>
+                                  <option value="2025">2025</option>
+                                  <option value="2026">2026</option>
+                                  <option value="2027">2027</option>
+                                  <option value="2028">2028</option>
+                                  <option value="2029">2029</option>
+                                  <option value="2030">2030</option>
+                                  <option value="2031">2031</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Seleccione el Año.
+                                </div>
+                              </div>  
+                            </div>
+                          </div>
+                          <div class="col-md-6 fondo">
+                            <img src="./Imagenes/6081538.jpg" class="imagenes">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="container-fluid" id="contenedor_efectivo">
+                      <div class="row">
+                          <div class="col-md-6 mb-4 formulario_efectivo">
+                                <div class="form-group"> 
+                                  <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #000000;"></i>&nbsp; Localidad de su Sucursal de Pago.</label>
+                                  <input required type="text" name="domicilioCPostal" id="domicilioCPostal" class="form-control" maxlength="20"/>
+                                  <div class="invalid-feedback">
+                                      Ingrese la Localidad de su Sucursal mas cercana.
+                                  </div>
+                                  <div class="valid-feedback">
+                                      La localidad de su Sucursal es valida.
+                                  </div>
+                                </div>
+                                <br>
+                                <p><i class="fa-solid fa-money-bill" style="color: #000000;"></i>&nbsp; Seleccione la Sucursal donde desea realizar el pago:&nbsp;</p>
+                                <br>
+                                <div class="col-md-12 botones_sucursales" id="imagenes">
+                                  <img src="./Imagenes/rapipago_logo.jpg" class="imagenes_select imagen_seleccionada" id="imagen1">&nbsp;&nbsp;
+                                  <img src="./Imagenes/pago-facil3.png" class="imagenes_select" id="imagen2">&nbsp;&nbsp;
+                                  <img src="./Imagenes/Cobro-Express.png" class="imagenes_select" id="imagen3">
+                                </div>
+                          </div> 
+                          <div class="col-md-6">
+                              <img src="./Imagenes/Efectivo-1.jpg" class="imagenes">
+                          </div> 
+                      </div>
+                   </div>
               </div>
   
               <div class="modal-footer">

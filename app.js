@@ -6,6 +6,27 @@ Categorias:
     4 - Candados
     5 - Puertas
 */
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+//----------------------------------------------------------
 let categorias = [{ 
                     idCategoria: 1,
                     nombreCategoria: 'Alarmas para casa',
@@ -169,3 +190,45 @@ const mostrarProductos = async () => {
   })
   document.getElementById("listaDeProductos").innerHTML = htmlProd
 };
+
+var contenido1=document.getElementById('contenedor_tarjeta').style.display="none";
+var contenido2=document.getElementById('contenedor_efectivo').style.display="none";
+
+function mostrar_metodoPago(){
+    const metodos=document.querySelector('#metodo_pago');
+    console.log(metodos);
+    metodos.addEventListener('change',()=> {
+      var opcion_valor=metodos.value;
+      
+      var opcion_seleccionada=metodos.options[metodos.selectedIndex];
+
+      if(opcion_seleccionada.value=="1"){
+        contenido1=document.getElementById('contenedor_tarjeta').style.display="block";
+        contenido2=document.getElementById('contenedor_efectivo').style.display="none";
+      }else if(opcion_seleccionada.value=="2"){
+        contenido2=document.getElementById('contenedor_efectivo').style.display="block";
+        contenido1=document.getElementById('contenedor_tarjeta').style.display="none";
+      }else{
+        contenido1=document.getElementById('contenedor_tarjeta').style.display="none";
+        contenido2=document.getElementById('contenedor_efectivo').style.display="none";
+      }
+
+    })
+    
+}
+
+function selector_imagen(){
+    
+    const imagenes=document.querySelectorAll('.imagenes_select');
+
+    imagenes.forEach(img => {
+        img.addEventListener('click',function() {
+            var activo=document.querySelector('.imagen_seleccionada');
+            activo.classList.remove('imagen_seleccionada');
+            this.classList.add('imagen_seleccionada');
+        })
+    });
+}
+
+window.addEventListener('load' ,selector_imagen);
+window.addEventListener('load' ,mostrar_metodoPago);
