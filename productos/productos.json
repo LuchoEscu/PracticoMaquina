@@ -40,22 +40,6 @@
         "imagen": "./Imagenes/Alarma Producto 4.PNG"
     },
     {
-        "producto":"Cámara de seguridad Dahua HAC-B1A11P-0280B Cooper con resolución de 1MP visión nocturna incluida",
-        "categoria": 3,
-        "precio": "$ 7.600",
-        "envioGratis": true,
-        "puntuacion": 3,
-        "imagen": "./Imagenes/Camara producto 10.PNG"
-    },
-    {
-        "producto":"Cámara de seguridad Ezviz C6N con resolución de 2MP visión nocturna incluida blanca",
-        "categoria": 3,
-        "precio": "$ 17.279",
-        "envioGratis": true,
-        "puntuacion": 3,
-        "imagen": "./Imagenes/Camara producto 9.PNG"
-    },
-    {
         "producto":"Alarma Auto Volumetrica Full Dos Controles Sirena 4 Canales",
         "categoria": 2,
         "precio": "$ 14.702",
@@ -70,14 +54,6 @@
         "envioGratis": false,
         "puntuacion": 3,
         "imagen": "./Imagenes/Alarma auto Producto 3.PNG"
-    },
-    {
-        "producto":"Cámara De Seguridad Ip 1080p Infrarrojo.",
-        "categoria": 3,
-        "precio": "$ 28.450",
-        "envioGratis": true,
-        "puntuacion": 3,
-        "imagen": "./Imagenes/Camara producto 3.PNG"
     },
     {
         "producto":"Candado De Aleación Bulit 10.000 Combinaciones 65mm Rojo.",
