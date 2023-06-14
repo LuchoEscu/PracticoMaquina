@@ -27,8 +27,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#inicio">
-          <img class="logo" src="./Imagenes/Logo1.svg">
-          Safe Home
+          &nbsp;&nbsp;Safe Home
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,26 +63,26 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./Imagenes/puerta 1.jpg" class="d-block w-100 ancho" alt="...">
+          <img src="./Imagenes/puerta 1.jpg" class="d-block w-100 ancho" alt="..." data-bs-interval="5000">
           <div class="carousel-caption d-none d-md-block">
-            <!-- <h5>No dejes tus puertas sin protección</h5>
-            <p>Safe Home cuenta con una variedad de seguros y otros accesorios Adecuados para la protección de Puertas.
-            </p> -->
+            <h5 class="titulo_carrusel1">No dejes tus puertas sin protección</h5>
+            <p class="parrafo1_car">Safe Home cuenta con una variedad de seguros y otros accesorios Adecuados para la protección de Puertas.
+            </p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./Imagenes/cctv-2596537_1280.jpg" class="d-block w-100 ancho" alt="...">
+          <img src="./Imagenes/camara7.jpg" class="d-block w-100 ancho" alt="..." data-bs-interval="2000">
           <div class="carousel-caption d-none d-md-block">
-            <!-- <h5>Poder ver las acciones de tus asaltantes e Informar de inmediato</h5>
-            <p>Con las cámaras que tenemos a nuestra disposición podrás monitorear distintas partes de tu casa, ya sea
-              desde tu computadora y smartphone.</p> -->
+            <h5 class="titulo_carrusel2">Poder ver las acciones de tus asaltantes e Informar de inmediato</h5>
+            <p class="parrafo2_car">Con las cámaras que tenemos a nuestra disposición podrás monitorear distintas partes de tu casa, ya sea
+              desde tu computadora y smartphone.</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="./Imagenes/Llave.jpg" class="d-block w-100 ancho" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <!-- <h5>Si saben la forma de tus cerraduras no las dejes sin cambiar</h5>
-            <p>También contamos con una variedad de cerraduras y un servicio para hacer copias de llaves.</p> -->
+            <h5 class="titulo_carrusel3">Si saben la forma de tus cerraduras no las dejes sin cambiar</h5>
+            <p class="parrafo3_car">También contamos con una variedad de cerraduras y un servicio para hacer copias de llaves.</p>
           </div>
         </div>
       </div>
@@ -101,7 +100,7 @@
   </div>
   <br>
   <!-- Inicio -->
-  <div class="container-fluid cuerpo">
+  <div class="container-fluid cuerpo cuerpo_inicio">
     <div class="row">
       <div class="col-md-6 pantallaInicio">
         <h2 class="tituloInicial" id="titulo">
@@ -124,7 +123,7 @@
   <hr>
   <!-- Productos -->
   <div id="productos" class="container-fluid cuerpo">
-    <h2 id="tituloProductos">Explora nuestros productos</h2>
+    <h2 id="tituloProductos">EXPLORA NUESTROS PRODUCTOS</h2>
     <br><br><br>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
@@ -140,10 +139,10 @@
                   <div class="row">
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="nombre"><i class="fa-solid fa-user" style="color: #000000;"></i> Nombre y apellido</label>
+                              <label for="nombre"><i class="fa-solid fa-user" style="color: #023E73;"></i> Nombre y apellido</label>
                               <input required type="text" id="nombre" name="nombre" class="form-control" maxlength="50"/>
                               <div class="invalid-feedback">
-                                Por favor Ingrese su Nombre y Apellido.
+                                Por favor, ingrese su nombre y apellido.
                               </div>
                               <div class="valid-feedback">
                                 Su Nombre y Apellido son Validos.
@@ -155,10 +154,10 @@
                   <div class="row">
                       <div class="col-md-6">
                           <div class="form-group">
-                              <label for="domicilioBarrio"><i class="fa-solid fa-house" style="color: #000000;"></i> Domicilio</label>
+                              <label for="domicilioBarrio"><i class="fa-solid fa-house" style="color: #023E73;"></i> Domicilio</label>
                               <input required type="text" name="domicilioBarrio" id="domicilioBarrio" class="form-control" maxlength="50"/>
                               <div class="invalid-feedback">
-                                Por favor Ingrese su Domicilio en el que se encuentre Ubicado.
+                                Por favor Ingrese su domicilio en el que se encuentre ubicado.
                               </div>
                               <div class="valid-feedback">
                                 Su Domicilio es Valido.
@@ -167,10 +166,10 @@
                       </div>
                       <div class="col-md-6">
                           <div class="form-group">
-                              <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #000000;"></i> Cód. Postal</label>
+                              <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #023E73;"></i> Cód. Postal</label>
                               <input required type="text" name="domicilioCPostal" id="domicilioCPostal" class="form-control" maxlength="20"/>
                               <div class="invalid-feedback">
-                                Por favor ingrese un Codigo postal.
+                                Por favor, ingrese un Codigo postal.
                               </div>
                               <div class="valid-feedback">
                                 Su Codigo postal es valido.
@@ -181,7 +180,7 @@
                   <br>
                   <div class="row">
                     <div class="col-md-6">
-                      <label for="validationCustom05" class="form-label"><i class="fa-solid fa-mountain-sun" style="color: #000000;"></i>&nbsp; Provincia</label>
+                      <label for="validationCustom05" class="form-label"><i class="fa-solid fa-mountain-sun" style="color: #023E73;"></i>&nbsp; Provincia</label>
                       <select class="form-select" id="validationCustom05" required>
                         <option selected value="">Seleccione una Provincia.</option>
                         <option value="Buenos Aires">Buenos Aires</option>
@@ -210,22 +209,22 @@
                         <option value="2">En Efectivo</option>
                       </select>
                       <div class="invalid-feedback">
-                        Por favor seleccione un Medio de Pago.
+                        Por favor seleccione un medio de pago.
                       </div>
                     </div>
                   </div>
                   <br><br>
-                   <div class="container-fluid" id="contenedor_tarjeta">
+                   <div class="container-fluid-md" id="contenedor_tarjeta">
                       <div class="row">
                           <h5>Datos de la Tarjeta</h5>
                           <div class="col-md-6 formulario_tarjeta mb-4">
-                            <label for="TarjetaNumero"><i class="fa-solid fa-credit-card" style="color: #000000;"></i>&nbsp;Numero de Tarjeta</label>
+                            <label for="TarjetaNumero"><i class="fa-solid fa-credit-card" style="color: #023E73;"></i>&nbsp;Número de tarjeta</label>
                             <input required type="number" name="TarjetaNumero" id="numero_tarjeta" class="form-control" maxlength="20"/>
                             <div class="invalid-feedback">
-                              Por favor ingrese un Numero de Tarjeta.
+                              Por favor, ingrese un Numero de tarjeta.
                             </div>
                             <div class="valid-feedback">
-                              Su Numero de Tarjeta es valido.
+                                Su Numero de tarjeta es válido.
                             </div>
                             <div>
                               <label for="tipo_tarjeta" class="form-label"></label>
@@ -240,18 +239,18 @@
                             </div>
                             <br>
                             <div class="col-md-6 mb-4">
-                              <label for="Codigotarjeta"><i class="fa-solid fa-lock" style="color: #000000;"></i>&nbsp;Codigo de verificacion: </label>
+                              <label for="Codigotarjeta"><i class="fa-solid fa-lock" style="color: #023E73;"></i>&nbsp;Código de verificación:</label>
                               <input required type="text" name="CodigoTarjeta" id="Codigotarjeta" class="form-control" maxlength="3" pattern="^[0-9]+$"/>
                               <div class="invalid-feedback">
-                                 Por favor ingrese su Codigo de Seguridad.
+                                Por favor, ingrese su Codigo de seguridad.
                               </div>
                               <div class="valid-feedback">
-                                Su Codigo de verificacion es Correcto.
+                                Su Codigo de verificación es correcto.
                               </div>
                             </div>
                             <div class="col-md-12 d-inline-flex mb-4 m-auto">
                               <div class="col-md-4 mb-4">
-                                <label for="validationCustom07" class="form-label"><i class="fa-solid fa-calendar" style="color: #000000;"></i>&nbsp;Mes venc:</label>
+                                <label for="validationCustom07" class="form-label"><i class="fa-solid fa-calendar" style="color: #023E73;"></i>&nbsp;Mes venc:</label>
                                 <select class="form-select" id="validationCustom04" required>
                                   <option selected value="">mes.</option>
                                   <option value="01">01</option>
@@ -273,7 +272,7 @@
                               </div>
                               &nbsp;&nbsp;
                               <div class="col-md-4 mb-4">
-                                <label for="validationCustom07" class="form-label"><i class="fa-solid fa-calendar" style="color: #000000;"></i>&nbsp;Año venc:</label>
+                                <label for="validationCustom07" class="form-label"><i class="fa-solid fa-calendar" style="color: #023E73;"></i>&nbsp;Año venc:</label>
                                 <select class="form-select" id="validationCustom04" required>
                                   <option selected value="">año.</option>
                                   <option value="2024">2024</option>
@@ -296,21 +295,21 @@
                         </div>
                       </div>
                   </div>
-                  <div class="container-fluid" id="contenedor_efectivo">
+                  <div class="container-fluid-md" id="contenedor_efectivo">
                       <div class="row">
                           <div class="col-md-6 mb-4 formulario_efectivo">
                                 <div class="form-group"> 
-                                  <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #000000;"></i>&nbsp; Localidad de su Sucursal de Pago.</label>
+                                  <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #023E73;"></i>&nbsp; Ubicación de su sucursal de pagos</label>
                                   <input required type="text" name="domicilioCPostal" id="domicilioCPostal" class="form-control" maxlength="20"/>
                                   <div class="invalid-feedback">
-                                      Ingrese la Localidad de su Sucursal mas cercana.
+                                      Ingrese la localidad de su Sucursal más cercana.
                                   </div>
                                   <div class="valid-feedback">
                                       La localidad de su Sucursal es valida.
                                   </div>
                                 </div>
                                 <br>
-                                <p><i class="fa-solid fa-money-bill" style="color: #000000;"></i>&nbsp; Seleccione la Sucursal donde desea realizar el pago:&nbsp;</p>
+                                <p><i class="fa-solid fa-money-bill" style="color: #023E73;"></i>&nbsp; Elige la sucursal donde quieres hacer el pago:&nbsp;</p>
                                 <br>
                                 <div class="col-md-12 botones_sucursales" id="imagenes">
                                   <img src="./Imagenes/rapipago_logo.jpg" class="imagenes_select imagen_seleccionada" id="imagen1">&nbsp;&nbsp;
@@ -337,9 +336,7 @@
   </div>
     <div class="row">
       <div class="col-md-3 categoriasProducto">
-        <h3>Filtro</h3>
-        <br><br>
-        <h4>Categorias</h4>
+        <p class="titulo_categoria"><i class="fa-solid fa-list" style="color: #ffffff;"></i>&nbsp;Categorías</p>
         <br>
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">

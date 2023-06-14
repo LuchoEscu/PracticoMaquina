@@ -150,7 +150,7 @@ const filtro = (cat) => {
     
   })
   if(res.length < 1){
-    htmlProd = '<div class="row"><div class="col-md-6 sinResultados"><br><img src="./Imagenes/duda.svg" class="img_cartel"><br><h3 class="sinResultados">Sin resultados para esta categoría.</h3><br></div></div>'
+    htmlProd = '<div class="row"><div class="col-md-6 sinResultados"><br><img src="./Imagenes/question-solid.svg" class="img_cartel"><br><h3 class="sinResultados">Sin resultados para esta categoría.</h3><br></div></div>'
   }
   document.getElementById("listaDeProductos").innerHTML = htmlProd
 
@@ -191,10 +191,11 @@ const mostrarProductos = async () => {
   document.getElementById("listaDeProductos").innerHTML = htmlProd
 };
 
-var contenido1=document.getElementById('contenedor_tarjeta').style.display="none";
-var contenido2=document.getElementById('contenedor_efectivo').style.display="none";
+
 
 function mostrar_metodoPago(){
+    var contenido1=document.getElementById('contenedor_tarjeta').style.display="none";
+    var contenido2=document.getElementById('contenedor_efectivo').style.display="none";
     const metodos=document.querySelector('#metodo_pago');
     console.log(metodos);
     metodos.addEventListener('change',()=> {
