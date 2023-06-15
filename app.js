@@ -111,6 +111,7 @@ const detallesCompra = (imagen, producto, precio, envioGratis, cantEstrellas) =>
 
   let estrellas = cantidadEstrellas(parseInt(cantEstrellas))
   let envio = envioGratis ? envioGratis : "Envío: $ 1.499"
+  let classEnvio = envioGratis ? 'envioGratis' : ''
   document.getElementById('productoCompra').innerHTML = '<div class="row imgProd">' +
     '<div class="col-md-4">' +
     '<img width="160" height="160" src="' + imagen + '"' +
@@ -125,7 +126,7 @@ const detallesCompra = (imagen, producto, precio, envioGratis, cantEstrellas) =>
     '<h3 class="text-start precioItem">' + precio + '</h3>' +
     '</div>' +
     '<div class="col-md-12">' +
-    '<p class="text-start envioGratis">' + envio + '</p>' +
+    '<p class="text-start '+classEnvio+'">' + envio + '</p>' +
     '</div>' +
     '</div>' +
     '<div class="row">' +
@@ -171,6 +172,7 @@ const listarProductos = (imagen, producto, precio, envioGratis, estrellas, cantE
 
 
 const filtro = (cat) => {
+  document.getElementById("resetarFiltro").style.display = "block"
   const res = productosList.filter(producto => producto.categoria === cat)
   let htmlProd = ''
   res.forEach(prod => {
@@ -183,6 +185,20 @@ const filtro = (cat) => {
   if (res.length < 1) {
     htmlProd = '<div class="row"><div class="col-md-6 sinResultados"><br><img src="./Imagenes/question-solid.svg" class="img_cartel"><br><h3 class="sinResultados">Sin resultados para esta categoría.</h3><br></div></div>'
   }
+  document.getElementById("listaDeProductos").innerHTML = htmlProd
+
+}
+
+const resetearFiltros = () => {
+  document.getElementById("resetarFiltro").style.display = "none"
+  
+  let htmlProd = ""
+  productosList.forEach(prod => {
+    let envioGratis = prod.envioGratis ? 'Envio gratis' : ''
+    let estrellas = cantidadEstrellas(prod.puntuacion)
+    htmlProd = htmlProd + listarProductos(prod.imagen, prod.producto, prod.precio, envioGratis, estrellas, prod.puntuacion)
+
+  })
   document.getElementById("listaDeProductos").innerHTML = htmlProd
 
 }
@@ -216,7 +232,7 @@ const mostrarProductos = async () => {
   productosList.forEach(prod => {
     let envioGratis = prod.envioGratis ? 'Envio gratis' : ''
     let estrellas = cantidadEstrellas(prod.puntuacion)
-    htmlProd = htmlProd + listarProductos(prod.imagen, prod.producto, prod.precio, envioGratis, estrellas)
+    htmlProd = htmlProd + listarProductos(prod.imagen, prod.producto, prod.precio, envioGratis, estrellas, prod.puntuacion)
 
   })
   document.getElementById("listaDeProductos").innerHTML = htmlProd
