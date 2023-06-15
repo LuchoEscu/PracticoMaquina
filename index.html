@@ -549,25 +549,36 @@
         </div>
       </div>
       <div class="col-md-6">
-        <form class="cajaForm">
+        <form class="cajaForm" action="https://formsubmit.co/jorgejacobo@sanluis.edu.ar" method="POST">
           <div class="mb-3">
             <h3 class="text-center">¡Envíanos tu consulta!</h3>
           </div>
           <div class="mb-3">
             <i class="fa-solid fa-user"></i>
             <label for="nombreContacto" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombreContacto" aria-describedby="emailHelp" required>
+            <input type="text" class="form-control" id="nombreContacto" name="Nombre" aria-describedby="emailHelp" required>
+            <div id="dato-invalido" class="invalid-feedback">Ingrese su Nombre, por favor.</div>
+            <div id="dato-valido" class="valid-feedback">Su nombre es valido.</div>
           </div>
           <div class="mb-3">
             <i class="fa-solid fa-at"></i>
             <label for="emailContacto" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="emailContacto" aria-describedby="emailHelp" required>
+            <input type="email" class="form-control" id="emailContacto" aria-describedby="emailHelp" name="Email" required>
             <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+            <div id="correo-invalido" class="invalid-feedback">Ingrese un correo electrónico, por favor.</div>
+            <div id="correo-valido" class="valid-feedback">Su correo electrónico es valido.</div>
+          </div>
+          <div class="mb-3">
+            <i class="fa-solid fa-comment"></i>
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="number" class="form-control" id="telefono" name="telefono"required>
+            <div class="invalid-feedback" id="numero-invalido">Ingrese un numero de teléfono, por favor.</div>
+            <div class="valid-feedback" id="numero-valido">Su numero de teléfono es valido.</div>
           </div>
           <div class="mb-3">
             <i class="fa-solid fa-message"></i>
             <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"
               placeholder="Aquí envie su consulta" required></textarea>
           </div>
           <div class="d-grid gap-2 col-6 mx-auto">

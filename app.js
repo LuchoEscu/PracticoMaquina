@@ -262,5 +262,90 @@ function selector_imagen() {
   });
 }
 
+function validar_nombre_teclas(event) {
+
+  var valor_name=document.getElementById('nombreContacto');
+  var expresion="^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$";
+  var valido=document.getElementById('dato-valido');
+  var invalido=document.getElementById('dato-invalido');
+
+  valor_name.addEventListener('keydown',function() {
+
+      if(valor_name.value==""){
+        invalido.style.display="block";
+        invalido.innerHTML="Ingrese su nombre, por favor.";
+        valido.style.display="none";
+        valor_name.classList.add('invalido');
+        valor_name.classList.remove('valido');
+        event.preventDefault();
+      }else if (valor_name.value.match(expresion)) {
+        invalido.style.display="none";
+        valido.style.display="block";
+        valor_name.classList.remove('invalido');
+        valor_name.classList.add('valido');
+      } else {
+        valido.style.display="none";
+        invalido.style.display="block";
+        invalido.innerHTML="Su nombre no es valido."
+        valor_name.classList.remove('valido');
+        valor_name.classList.add('invalido');
+        event.preventDefault();
+      }
+
+  });
+}
+
+function validarCorreo() {
+  var valor_correo=document.getElementById('emailContacto');
+  var invalido=document.getElementById('correo-invalido');
+  var valido=document.getElementById('correo-valido');
+  var expresion3=/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+
+  valor_correo.addEventListener('keydown',function () {
+      if(valor_correo.value==""){
+        valor_correo.classList.add('invalido');
+        valor_correo.classList.remove('valido');
+        invalido.style.display="block";
+        valido.style.display="none";
+      }else if(valor_correo.value.match(expresion3)){
+        valor_correo.classList.add('valido');
+        valor_correo.classList.remove('invalido');
+        invalido.style.display="none";
+        valido.style.display="block";
+      }else{
+        valor_correo.classList.add('invalido');
+        valor_correo.classList.remove('valido');
+        invalido.style.display="block";
+        valido.style.display="none";
+        invalido.innerHTML="Su correo ingresado, se encuentra Invalido."
+      }
+  })
+}
+
+function validarTelefono() {
+  var numero=document.getElementById('telefono');
+  var invalido1=document.getElementById('numero-invalido');
+  var valido1=document.getElementById('numero-valido');  
+
+  numero.addEventListener('keydown',function () {
+    
+    if(numero.value==""){
+      numero.classList.add('invalido');
+      numero.classList.remove('valido');
+      invalido1.style.display="block";
+      valido1.style.display="none";
+    }else{
+      numero.classList.add('valido');
+      numero.classList.remove('invalido');
+      invalido1.style.display="none";
+      valido1.style.display="block";
+    }
+  })
+
+}
+
+window.addEventListener('load' ,validarTelefono);
+window.addEventListener('load' ,validarCorreo);
+window.addEventListener('load' ,validar_nombre_teclas);
 window.addEventListener('load', selector_imagen);
 window.addEventListener('load', mostrar_metodoPago);
