@@ -120,7 +120,6 @@
     </div>
   </div>
   <br>
-  <hr>
   <!-- Productos -->
   <div id="productos" class="container-fluid cuerpo">
     <h2 id="tituloProductos">EXPLORA NUESTROS PRODUCTOS</h2>
@@ -130,9 +129,9 @@
           <div class="modal-content">
               <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">Completa la compra</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()"></button>
               </div>
-              <form onsubmit="validarCompra(event)" class="needs-validation" novalidate>
+              <form onsubmit="validarCompra(event)" id="formCompra" class="needs-validation" novalidate>
               <div class="modal-body">
                   <div id="productoCompra"></div>
                   <hr>
@@ -145,7 +144,7 @@
                                 Por favor, ingrese su nombre y apellido.
                               </div>
                               <div class="valid-feedback">
-                                Su Nombre y Apellido son Validos.
+                                Su Nombre y Apellido son validos.
                               </div>
                           </div>
                       </div>
@@ -157,10 +156,10 @@
                               <label for="domicilioBarrio"><i class="fa-solid fa-house" style="color: #023E73;"></i> Domicilio</label>
                               <input required type="text" name="domicilioBarrio" id="domicilioBarrio" class="form-control" maxlength="50"/>
                               <div class="invalid-feedback">
-                                Por favor Ingrese su domicilio en el que se encuentre ubicado.
+                                Por favor ingrese su domicilio.
                               </div>
                               <div class="valid-feedback">
-                                Su Domicilio es Valido.
+                                Su Domicilio es válido.
                               </div>
                           </div>
                       </div>
@@ -169,10 +168,10 @@
                               <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #023E73;"></i> Cód. Postal</label>
                               <input required type="text" name="domicilioCPostal" id="domicilioCPostal" class="form-control" maxlength="20"/>
                               <div class="invalid-feedback">
-                                Por favor, ingrese un Codigo postal.
+                                Por favor, ingrese un código postal.
                               </div>
                               <div class="valid-feedback">
-                                Su Codigo postal es valido.
+                                Su código postal es valido.
                               </div>
                            </div>
                        </div>
@@ -195,7 +194,7 @@
                         <option value="Tierra del fuego">Tierra del fuego</option>
                       </select>
                       <div class="invalid-feedback">
-                        Por favor seleccione la Provincia en la que Reside.
+                        Por favor seleccione la provincia en la que reside.
                       </div>
                     </div>
                   </div>
@@ -203,9 +202,9 @@
                   <div class="row" id="metodo_de_pago"><h6>Metodos de Pago</h6>
                     <div class="col-md-6">
                       <label for="metodo_pago" class="form-label"></label>
-                      <select class="form-select" id="metodo_pago" required>
+                      <select class="form-select" id="metodo_pago" required onchange="salvarValidaciones()">
                         <option selected disabled value="">Seleccione un medio de pago.</option>
-                        <option selected value="1">Tarjetas de Credito/Debito</option>
+                        <option value="1">Tarjetas de Credito/Debito</option>
                         <option value="2">En Efectivo</option>
                       </select>
                       <div class="invalid-feedback">
@@ -221,10 +220,10 @@
                             <label for="TarjetaNumero"><i class="fa-solid fa-credit-card" style="color: #023E73;"></i>&nbsp;Número de tarjeta</label>
                             <input required type="number" name="TarjetaNumero" id="numero_tarjeta" class="form-control" maxlength="20"/>
                             <div class="invalid-feedback">
-                              Por favor, ingrese un Numero de tarjeta.
+                              Por favor, ingrese un número de tarjeta.
                             </div>
                             <div class="valid-feedback">
-                                Su Numero de tarjeta es válido.
+                                Su número de tarjeta es válido.
                             </div>
                             <div>
                               <label for="tipo_tarjeta" class="form-label"></label>
@@ -234,7 +233,7 @@
                                 <option value="Cencosud">Mastercard</option>
                               </select>
                               <div class="invalid-feedback">
-                                Por favor seleccione el Tipo de tarjeta.
+                                Por favor seleccione el tipo de tarjeta.
                               </div>
                             </div>
                             <br>
@@ -242,10 +241,10 @@
                               <label for="Codigotarjeta"><i class="fa-solid fa-lock" style="color: #023E73;"></i>&nbsp;Código de verificación:</label>
                               <input required type="text" name="CodigoTarjeta" id="Codigotarjeta" class="form-control" maxlength="3" pattern="^[0-9]+$"/>
                               <div class="invalid-feedback">
-                                Por favor, ingrese su Codigo de seguridad.
+                                Por favor, ingrese su código de seguridad.
                               </div>
                               <div class="valid-feedback">
-                                Su Codigo de verificación es correcto.
+                                Su código de verificación es correcto.
                               </div>
                             </div>
                             <div class="col-md-12 d-inline-flex mb-4 m-auto">
@@ -273,7 +272,7 @@
                               &nbsp;&nbsp;
                               <div class="col-md-4 mb-4">
                                 <label for="validationCustom07" class="form-label"><i class="fa-solid fa-calendar" style="color: #023E73;"></i>&nbsp;Año venc:</label>
-                                <select class="form-select" id="validationCustom04" required>
+                                <select class="form-select" id="validationCustom06" required>
                                   <option selected value="">año.</option>
                                   <option value="2024">2024</option>
                                   <option value="2025">2025</option>
@@ -298,9 +297,9 @@
                   <div class="container-fluid-md" id="contenedor_efectivo">
                       <div class="row">
                           <div class="col-md-6 mb-4 formulario_efectivo">
-                                <div class="form-group"> 
-                                  <label for="domicilioCPostal"><i class="fa-solid fa-location-dot" style="color: #023E73;"></i>&nbsp; Ubicación de su sucursal de pagos</label>
-                                  <input required type="text" name="domicilioCPostal" id="domicilioCPostal" class="form-control" maxlength="20"/>
+                                <!-- <div class="form-group"> 
+                                  <label for="efectivoID"><i class="fa-solid fa-location-dot" style="color: #023E73;"></i>&nbsp; Ubicación de su sucursal de pagos</label>
+                                  <input required type="text" name="efectivoID" id="efectivoID" class="form-control" maxlength="20"/>
                                   <div class="invalid-feedback">
                                       Ingrese la localidad de su Sucursal más cercana.
                                   </div>
@@ -308,7 +307,7 @@
                                       La localidad de su Sucursal es valida.
                                   </div>
                                 </div>
-                                <br>
+                                <br> -->
                                 <p><i class="fa-solid fa-money-bill" style="color: #023E73;"></i>&nbsp; Elige la sucursal donde quieres hacer el pago:&nbsp;</p>
                                 <br>
                                 <div class="col-md-12 botones_sucursales" id="imagenes">
@@ -327,7 +326,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" id="cerrarCompra" data-bs-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary" id="aceptarCompra" name="aceptarCompra"
-                          onclick="">Comprar</button>
+                ]>Comprar</button>
               </div>  
               </form>
               
