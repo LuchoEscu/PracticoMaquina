@@ -114,7 +114,7 @@ const detallesCompra = (imagen, producto, precio, envioGratis, cantEstrellas) =>
   let classEnvio = envioGratis ? 'envioGratis' : ''
   document.getElementById('productoCompra').innerHTML = '<div class="row imgProd">' +
     '<div class="col-md-4">' +
-    '<img width="160" height="160" src="' + imagen + '"' +
+    '<img width="120" height="120" src="' + imagen + '"' +
     'class="img-fluid img-thumbnail imgBorde" alt="...">' +
     '</div>' +
     '<div class="col-md-8">' +
@@ -143,7 +143,7 @@ const listarProductos = (imagen, producto, precio, envioGratis, estrellas, cantE
   let html = '<a href="#view" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="detallesCompra(' + "'" + imagen + "'," + "'" + producto + "'," + "'" + precio + "'," + "'" + envioGratis + "'," + "'" + cantEstrellas + "'" + ')" class="list-group-item list-group-item-action itemsProd" aria-current="true">' +
     '<div class="row imgProd">' +
     '<div class="col-md-4">' +
-    '<img width="160" height="160" src="' + imagen + '"' +
+    '<img width="120" height="120" src="' + imagen + '"' +
     'class="img-fluid img-thumbnail imgBorde" alt="...">' +
     '</div>' +
     '<div class="col-md-8">' +

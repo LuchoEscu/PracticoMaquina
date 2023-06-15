@@ -16,6 +16,8 @@ nav{
     background: linear-gradient(111.96deg, #2d3a57 21.67%, #2a5873 38%, #26889f 60.93%, #2e8ea0 63.74%, #4ba2a2 75.36%, #5dafa3 85.43%, #63b3a4 92.76%);
     height: 90px;
 }
+
+
 .card{
     margin: 0 auto !important;
     float: none !important;
@@ -221,13 +223,11 @@ h2{
 }
 
 .categoriasProducto{
-    height: 560px;
     padding: 20px;
     background-color: #2d3a57;
     color: white;
-    max-width: 400px;
+    max-width: 500px;
     height: 100%;
-    padding-left: 20px;
     padding-top: 20px;
 }
 
@@ -389,4 +389,109 @@ h2{
 
 .valido{
     border: 3px solid green;
+}
+
+/*Efecto 1: */
+
+/*#titulo_nav {
+    --b: 0.2em;   
+    --c: #93c3ee; 
+    
+    color: #0000;
+    padding-block: var(--b);
+    background: 
+      linear-gradient(var(--c) 50%,white 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+  }
+  #titulo_nav:hover {
+    --_p: 100%;
+    --_s: .3s;
+  }*/
+
+/*Efecto 2: */
+
+.enlace_titulo{
+    overflow: hidden;
+    border-bottom: 0.2em #93c3ee solid ;
+    animation: titulo 2.5s linear forwards alternate;
+    max-width: 200px;
+}
+
+#titulo_nav{
+    color: #93c3ee;
+}
+
+@keyframes titulo{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    30%{
+        width:10%;
+        height: 0;
+    }
+    60%{
+        width: 11.0vw;
+        height: 2.6vw;
+    }
+    80%{
+        width: 11.0vw;
+        height: 2.6vw;
+    }
+    100%{
+        width: 11.0vw;
+        height: 2.6vw;
+    }
+}
+
+/*Media queries*/
+@media (max-width: 574px) {
+    nav{
+        height: 100%;
+        font-size: 15px;
+    }
+
+    .enlace_titulo{
+        overflow: hidden;
+        border-bottom: 0.2em #93c3ee solid ;
+        -o-animation: titulo 2.5s linear forwards alternate;
+        -webkit-animation: titulo 2.5s linear forwards alternate;
+        -ms-animation: titulo 2.5s linear forwards alternate;
+        animation: titulo 2.5s linear forwards alternate;
+        max-width: 200px;
+    }
+    
+    #titulo_nav{
+        color: #93c3ee;
+    }
+    
+    @keyframes titulo{
+        0%{
+            width: 0;
+            height: 0;
+        }
+        30%{
+            width:10%;
+            height: 0;
+        }
+        60%{
+            width: 27.9vw;
+            height: 7.3vw;
+        }
+        80%{
+            width: 27.9vw;
+            height: 7.3vw;
+        }
+        100%{
+            width: 27.9vw;
+            height: 7.3vw;
+        }
+    }
+
+    .itemsProd{
+        height: 352px;
+    }    
 }
