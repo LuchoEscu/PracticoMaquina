@@ -44,6 +44,18 @@ nav{
     padding-top: 12px;
     padding-bottom: 12px;
 }
+.manito {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    cursor: pointer;
+}
+.manito:hover, .manito:focus {
+    background-size: 100% 2px;
+}
 .cuerpo{
     padding: 40px 35px;
 }
