@@ -8,6 +8,10 @@
     --tipeo_titulocaracteres: 18;
 }
 
+.justify {
+    text-align: justify !important;
+}
+
 nav{
     background: linear-gradient(111.96deg, #2d3a57 21.67%, #2a5873 38%, #26889f 60.93%, #2e8ea0 63.74%, #4ba2a2 75.36%, #5dafa3 85.43%, #63b3a4 92.76%);
     height: 90px;
